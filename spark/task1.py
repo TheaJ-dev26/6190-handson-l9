@@ -36,7 +36,7 @@ query = (
     .writeStream
     .format("console")
     .option("path", "task_1")
-    .option("checkpointLocation", "checkpoint_csv")
+    .option("checkpointLocation", "outputs/task_1/checkpoint_csv")
     .option("header", True)
     .outputMode("append")
     .start()

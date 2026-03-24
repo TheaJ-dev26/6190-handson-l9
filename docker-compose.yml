@@ -19,7 +19,7 @@ services:
     volumes:
       - ./spark:/app
     command: >
-      /opt/spark/bin/spark-submit /app/task3.py
+      /opt/spark/bin/spark-submit /app/task1.py
     ports:
       - "4040:4040"
 
