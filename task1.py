@@ -35,7 +35,7 @@ query = (
     result_df
     .writeStream
     .format("csv")
-    .option("path", "outputs")
+    .option("path", "task_1")
     .option("checkpointLocation", "checkpoint_csv")
     .option("header", True)
     .outputMode("append")
