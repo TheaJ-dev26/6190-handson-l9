@@ -34,7 +34,7 @@ result_df = (
 query = (
     result_df
     .writeStream
-    .format("csv")
+    .format("console")
     .option("path", "task_1")
     .option("checkpointLocation", "checkpoint_csv")
     .option("header", True)
