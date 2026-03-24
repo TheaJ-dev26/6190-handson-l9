@@ -59,7 +59,7 @@ final_df = (
 # Define a function to write each batch to a CSV file with column names
 def write_batch(batch_df, batch_id):
     # Save the batch DataFrame as a CSV file with headers included
-    output_path = f"task3_outputs/batch_{batch_id}"
+    output_path = f"outputs/batch_{batch_id}"
     batch_df.write.mode("overwrite").csv(output_path, header=True)
 
 # Use foreachBatch to apply the function to each micro-batch
