@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  generator:
+    build: ./generator
+    container_name: generator
+    ports:
+      - "9999:9999"
+    networks:
+      - sparknet
+
+  spark:
+    build: ./spark
+    container_name: spark
+    depends_on:
+      - generator
+    networks:
+      - sparknet
+    volumes:
+      - ./spark:/app
+    command: >
+      /opt/spark/bin/spark-submit /app/task3.py
+    ports:
+      - "4040:4040"
+
+networks:
+  sparknet:
+    driver: bridge
