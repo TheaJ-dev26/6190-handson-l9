@@ -1,6 +1,6 @@
 # import the necessary libraries.
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import from_json, col, avg, sum, to_timestamp
+from pyspark.sql.functions import from_json, col, avg, sum, to_timestamp, window
 from pyspark.sql.types import StructType, StructField, StringType, DoubleType, TimestampType
 
 # Create a Spark session
