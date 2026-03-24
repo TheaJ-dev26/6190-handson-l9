@@ -40,7 +40,7 @@ result_df = (
 
 # Perform windowed aggregation: sum of fare_amount over a 5-minute window sliding by 1 minute
 windowed_df = (
-    parsed_df
+    result_df
     .groupBy(
         window(col("event_time"), "5 minutes", "1 minute"),
         col("driver_id")
